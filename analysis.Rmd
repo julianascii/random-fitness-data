@@ -10,3 +10,14 @@ library(dplyr)
 library(readr)
 library(ggplot2)
 ```
+
+```{r}
+# read file
+fitness <- read_csv("fitness_dataset.csv")
+
+# initial inspection
+glimpse(fitness)
+head(fitness)
+summary(fitness)
+```
+
