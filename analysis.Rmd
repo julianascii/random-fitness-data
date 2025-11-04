@@ -21,3 +21,21 @@ head(fitness)
 summary(fitness)
 ```
 
+```{r}
+# average and median values of the program
+avg_age <- mean(fitness$age)
+avg_duration <- mean(fitness$duration_min)
+avg_calories_burned <- mean(fitness$calories_burned)
+avg_heart_rate <- mean(fitness$heart_rate_avg)
+avg_steps <- mean(fitness$steps)
+avg_sleep_hours <- mean(fitness$sleep_hours)
+avg_weight <- mean(fitness$weight_kg)
+
+median_age <- median(fitness$age)
+median_duration <- median(fitness$duration_min)
+median_calories_burned <- median(fitness$calories_burned)
+median_heart_rate <- median(fitness$heart_rate_avg)
+median_steps <- median(fitness$steps)
+median_sleep_hours <- median(fitness$sleep_hours)
+median_weight <- median(fitness$weight_kg)
+
