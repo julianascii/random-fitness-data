@@ -1,0 +1,12 @@
+---
+title: "fitness_analysis"
+author: "julianascii"
+output: html_document
+---
+
+```{r}
+# load packages
+library(dplyr)
+library(readr)
+library(ggplot2)
+```
