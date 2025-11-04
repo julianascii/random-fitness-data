@@ -58,3 +58,21 @@ print(paste("The median sleeping hours of the participants joining the program i
 print(paste("The median weight (in kilograms) of the participants joining the program is", median_weight, "kilograms."))
 ```
 
+```{r}
+# further insights
+gender_count <- fitness %>%
+    group_by(gender) %>%
+    summarize(count = n())
+gender_count
+
+age_1 <- fitness %>%
+  group_by(age) %>%
+  filter(age < 18) %>%
+  summarize(count = n())
+age_1
+
+act_type <- fitness %>%
+  group_by(activity_type) %>%
+  summarize(count = n())
+act_type
+```
