@@ -76,3 +76,51 @@ act_type <- fitness %>%
   summarize(count = n())
 act_type
 ```
+
+```{r}
+# make vizualizations
+viz1 <- ggplot(fitness, aes(x = duration_min,
+                            y = calories_burned)) +
+        geom_point(aes(color = weight_kg), 
+                   alpha = 1) +  
+        geom_smooth() +
+        labs(
+          title = "Duration of Workout VS Calories Burned",
+          subtitle = "Considering Weight in Kilograms",
+          x = "Duration of Workout", 
+          y = "Calories Burned",
+          color = "Weight (Kg)"
+             ) +
+        theme_minimal(base_size = 13) +
+        theme(
+          plot.title = element_text(face = "bold", size = 15),
+          plot.subtitle = element_text(size = 13, color = "gray40")
+             )
+viz1
+
+# for previous analyses
+viz2 <- ggplot(fitness, aes(x = activity_type)) +
+        geom_bar(color = "darkgreen",
+                 width = 0.7,
+                 fill = "pink"
+                 ) +
+        geom_text(
+          stat = "count",
+          aes(label = after_stat(count)),
+          position = position_stack(vjust = 0.5),
+          size = 3.5,
+          color = "black"
+                 ) +
+        labs(
+          title = "Activity Types",
+          subtitle = "With the Number of Fitness Goers Involved",
+          x = "Activity Type",
+          y = "Frequency"
+            ) +
+        theme(
+          plot.title = element_text(face = "bold", size = 15),
+          plot.subtitle = element_text(size = 13, color = "gray40"),
+          axis.text.x = element_text(size = 10)
+        )
+viz2
+```
