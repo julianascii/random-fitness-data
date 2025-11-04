@@ -39,3 +39,22 @@ median_steps <- median(fitness$steps)
 median_sleep_hours <- median(fitness$sleep_hours)
 median_weight <- median(fitness$weight_kg)
 
+# optional: print the values (for mean)
+print(paste("The average age of participants joining the program is", format(avg_age, digits = 2)))
+print(paste("The average duration (in minutes) undergone by participants joining the program is", format(avg_duration, digits = 2)))
+print(paste("The average calories burned by the participants joining the program is", format(avg_calories_burned, digits = 3), "calories."))
+print(paste("The average heart rate of the participants joining the program is", format(avg_heart_rate, digits = 3), "beats per minute."))
+print(paste("The average number of steps acocmplished by the participants joining the program is", format(avg_steps, digits = 5), "steps."))
+print(paste("The average sleeping hours of the participants joining the program is", avg_sleep_hours, "hours."))
+print(paste("The average weight (in kilograms) of the participants joining the program is", avg_weight, "kilograms."))
+
+# optional: print the values (for median)
+print(paste("The median age of participants joining the program is", format(median_age, digits = 2)))
+print(paste("The median duration (in minutes) undergone by participants joining the program is", format(median_duration, digits = 2)))
+print(paste("The median calories burned by the participants joining the program is", format(median_calories_burned, digits = 3), "calories."))
+print(paste("The median heart rate of the participants joining the program is", format(median_heart_rate, digits = 3), "beats per minute."))
+print(paste("The median number of steps acocmplished by the participants joining the program is", format(median_steps, digits = 5), "steps."))
+print(paste("The median sleeping hours of the participants joining the program is", median_sleep_hours, "hours."))
+print(paste("The median weight (in kilograms) of the participants joining the program is", median_weight, "kilograms."))
+```
+
